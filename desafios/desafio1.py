@@ -17,7 +17,7 @@ def num_caract(message: dict) -> int:
     return len(message["input"])
 
 
-def transformar_entrada(_):
+def transformar_entrada(_) -> str:
     return "Conseguiu!"
 
 
