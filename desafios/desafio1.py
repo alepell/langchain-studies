@@ -25,9 +25,7 @@ run1 = RunnablePassthrough.assign(num_caract=num_caract)
 run2 = RunnableLambda(transformar_entrada)
 
 
-chain = run1 | RunnableParallel(
-    transformar_entrada=run2, passa_pra_frente=RunnablePassthrough()
-)
+chain = run1 | RunnableParallel(transformar_entrada=run2, passa_pra_frente=run1)
 
 
 result = chain.invoke({"input": "Parabéns pra Você"})
