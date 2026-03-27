@@ -13,7 +13,7 @@ from langchain_core.runnables import (
 )
 
 
-def num_caract(message: dict):
+def num_caract(message: dict) -> int:
     return len(message["input"])
 
 
