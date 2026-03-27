@@ -17,12 +17,13 @@ def num_caract(message: dict):
     return len(message["input"])
 
 
-def transformar_entrada(message: str):
+def transformar_entrada(_):
     return "Conseguiu!"
 
 
 run1 = RunnablePassthrough.assign(num_caract=num_caract)
 run2 = RunnableLambda(transformar_entrada)
+
 
 chain = run1 | RunnableParallel(
     transformar_entrada=run2, passa_pra_frente=RunnablePassthrough()
