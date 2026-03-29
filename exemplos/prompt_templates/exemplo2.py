@@ -19,7 +19,7 @@ retorno2 = prompt_template2.invoke({"tema": "navegação", "idioma": "português
 prompt_template3 = ChatPromptTemplate(
     [("user", "Gere para mim uma poema sobre: {tema}. Escreva em {idioma}")]
 )
-retorno3 = prompt_template3.invoke({"tema": "navegação", "idioma": "português"})
+retorno3 = prompt_template3.invoke({"tema": "carros", "idioma": "português"})
 
 print(retorno)
 print(retorno2)
